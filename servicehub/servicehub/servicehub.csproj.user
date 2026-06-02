@@ -16,6 +16,9 @@
     <Compile Update="FrmListarServico.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmNiveis.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmNovoCliente.cs">
       <SubType>Form</SubType>
     </Compile>

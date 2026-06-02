@@ -1,0 +1,8 @@
+C:\Users\guilherme.soliveir90\source\repos\Aula dia 25-05 wil2\Aula dia 25-05 wil2\bin\Debug\Aula dia 25-05 wil2.exe.config
+C:\Users\guilherme.soliveir90\source\repos\Aula dia 25-05 wil2\Aula dia 25-05 wil2\bin\Debug\Aula dia 25-05 wil2.exe
+C:\Users\guilherme.soliveir90\source\repos\Aula dia 25-05 wil2\Aula dia 25-05 wil2\bin\Debug\Aula dia 25-05 wil2.pdb
+C:\Users\guilherme.soliveir90\source\repos\Aula dia 25-05 wil2\Aula dia 25-05 wil2\obj\Debug\Aula dia 25-05 wil2.csproj.AssemblyReference.cache
+C:\Users\guilherme.soliveir90\source\repos\Aula dia 25-05 wil2\Aula dia 25-05 wil2\obj\Debug\Aula dia 25-05 wil2.csproj.CoreCompileInputs.cache
+C:\Users\guilherme.soliveir90\source\repos\Aula dia 25-05 wil2\Aula dia 25-05 wil2\obj\Debug\Aula dia 25-05 wil2.exe
+C:\Users\guilherme.soliveir90\source\repos\Aula dia 25-05 wil2\Aula dia 25-05 wil2\obj\Debug\Aula dia 25-05 wil2.pdb
+C:\Users\guilherme.soliveir90\source\repos\Aula dia 25-05 wil2\Aula dia 25-05 wil2\obj\Debug\Aula dia 25-05 wil2.exe.config

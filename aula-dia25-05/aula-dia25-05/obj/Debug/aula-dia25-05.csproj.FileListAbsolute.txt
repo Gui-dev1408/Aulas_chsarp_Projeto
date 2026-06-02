@@ -1,0 +1,8 @@
+C:\Users\guilherme.soliveir90\source\repos\aula-dia25-05\aula-dia25-05\bin\Debug\aula-dia25-05.exe.config
+C:\Users\guilherme.soliveir90\source\repos\aula-dia25-05\aula-dia25-05\bin\Debug\aula-dia25-05.exe
+C:\Users\guilherme.soliveir90\source\repos\aula-dia25-05\aula-dia25-05\bin\Debug\aula-dia25-05.pdb
+C:\Users\guilherme.soliveir90\source\repos\aula-dia25-05\aula-dia25-05\obj\Debug\aula-dia25-05.csproj.AssemblyReference.cache
+C:\Users\guilherme.soliveir90\source\repos\aula-dia25-05\aula-dia25-05\obj\Debug\aula-dia25-05.csproj.CoreCompileInputs.cache
+C:\Users\guilherme.soliveir90\source\repos\aula-dia25-05\aula-dia25-05\obj\Debug\aula-dia25-05.exe
+C:\Users\guilherme.soliveir90\source\repos\aula-dia25-05\aula-dia25-05\obj\Debug\aula-dia25-05.pdb
+C:\Users\guilherme.soliveir90\source\repos\aula-dia25-05\aula-dia25-05\obj\Debug\aula-dia25-05.exe.config

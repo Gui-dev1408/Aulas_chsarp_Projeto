@@ -82,6 +82,7 @@
             btnExcluir.Text = "E&xcluir";
             btnExcluir.TextImageRelation = TextImageRelation.ImageAboveText;
             btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnPesquisar
             // 
@@ -92,13 +93,14 @@
             btnPesquisar.Font = new Font("Arial Narrow", 11F, FontStyle.Bold);
             btnPesquisar.ForeColor = Color.Black;
             btnPesquisar.Image = Properties.Resources.Search1;
-            btnPesquisar.Location = new Point(314, 125);
+            btnPesquisar.Location = new Point(205, 125);
             btnPesquisar.Name = "btnPesquisar";
             btnPesquisar.Size = new Size(93, 67);
             btnPesquisar.TabIndex = 20;
             btnPesquisar.Text = "&Pesquisar";
             btnPesquisar.TextImageRelation = TextImageRelation.ImageAboveText;
             btnPesquisar.UseVisualStyleBackColor = true;
+            btnPesquisar.Click += btnPesquisar_Click;
             // 
             // btnEdit
             // 
@@ -109,13 +111,14 @@
             btnEdit.Font = new Font("Arial Narrow", 11F, FontStyle.Bold);
             btnEdit.ForeColor = Color.Black;
             btnEdit.Image = (Image)resources.GetObject("btnEdit.Image");
-            btnEdit.Location = new Point(205, 125);
+            btnEdit.Location = new Point(304, 125);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(93, 67);
             btnEdit.TabIndex = 19;
             btnEdit.Text = "&Editar";
             btnEdit.TextImageRelation = TextImageRelation.ImageAboveText;
             btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnAdd
             // 
@@ -200,11 +203,14 @@
             dgvCategorias.AllowUserToDeleteRows = false;
             dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCategorias.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
-            dgvCategorias.Location = new Point(55, 227);
+            dgvCategorias.Location = new Point(55, 243);
             dgvCategorias.Name = "dgvCategorias";
             dgvCategorias.ReadOnly = true;
+            dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCategorias.Size = new Size(622, 195);
             dgvCategorias.TabIndex = 29;
+            dgvCategorias.CellClick += dgvCategorias_CellClick;
+            dgvCategorias.CellContentClick += dgvCategorias_CellContentClick;
             // 
             // Column1
             // 

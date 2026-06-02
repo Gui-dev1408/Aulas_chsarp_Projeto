@@ -32,6 +32,10 @@ namespace ServiceHubClass
         {
             Id = 0;
         }
+        public Categoria(int id)
+        {
+            Id = id;
+        }
 
         public Categoria(string? nome, string? sigla)
         {
@@ -50,10 +54,9 @@ namespace ServiceHubClass
         // Métodos (Funcionalidades - RFs) - Inserir, Atualizar, Listar, obterPorId(id), Excluir(id)
 
         // Não Retorna valor    
+
         public void Inserir()
         {
-            // O método é chamado
-
             var cmd = Banco.Abrir();
             if (cmd.Connection.State == ConnectionState.Open)
             {
@@ -65,7 +68,6 @@ namespace ServiceHubClass
                 cmd.Connection.Close();
             }
         }
-
         public static Categoria ObterPorId(int id)
         {
             Categoria cat = new();
@@ -75,14 +77,15 @@ namespace ServiceHubClass
             var dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                // 
                 cat = new(dr.GetInt32(0), dr.GetString(1), dr.GetString(2));
             }
             dr.Close();
             cmd.Connection.Close();
             return cat;
         }
-        public static List<Categoria> ObterLista()
+
+
+        public static List<Categoria> ObterLista(string busca ="")
         {
             List<Categoria> categorias = new List<Categoria>();
 
@@ -90,18 +93,40 @@ namespace ServiceHubClass
 
             if (cmd.Connection.State == ConnectionState.Open)
             {
+                if (busca != "")
+                {
+                    // ERRADO
+                    // "SELECT * FROM categorias ORDER BY nome" + 
+                    // "where nome like '% "+busca+"%' order by nome";
+
+                    // ARRUMADO ↓
+                    cmd.CommandText = $"Select * from categorias where nome like '%" + busca + "%' " +
+                   "order by nome";
+                }
+                else
+                {
+                    cmd.CommandText = "SELECT * FROM categorias ORDER BY nome";
+                }
+
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM categorias ORDER BY nome";
 
                 var dr = cmd.ExecuteReader();
 
                 while (dr.Read())
                 {
-                    categorias.Add(new(dr.GetInt32(0), dr.GetString(1), dr.GetString(2)));
+                    categorias.Add(
+                        new Categoria( // ← ARRUMADO (colocou o nome da classe)
+                            dr.GetInt32(0),
+                            dr.GetString(1),
+                            dr.GetString(2)
+                        )
+                    );
                 }
+
                 dr.Close();
                 cmd.Connection.Close();
             }
+
             return categorias;
         }
         public bool Atualizar()
@@ -122,12 +147,12 @@ namespace ServiceHubClass
             cmd.Connection.Close();
             return atualizada;
         }
-        public void Excluir(int id)
+        public void Excluir()
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_categoria_delete";
-            cmd.Parameters.AddWithValue("spid", id);
+            cmd.Parameters.AddWithValue("spid", Id);
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }
