@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceHubClass;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Servicehub
+namespace ServiceHub
 {
     public partial class FrmProduto : Form
     {
@@ -17,36 +18,29 @@ namespace Servicehub
             InitializeComponent();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmProduto_Load(object sender, EventArgs e)
         {
+            cmbCategoria.DataSource = Categoria.ObterLista();
+            cmbCategoria.DisplayMember = "Nome";
+            cmbCategoria.ValueMember = "Id";
 
+            dataGridView1.DataSource = Produto.ObterPorLista();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (txtCodBarras.Text != string.Empty || txtDescricao.Text != string.Empty)
-            {
-                // Dados
-                string codBarras = txtCodBarras.Text;
-                string descricao = txtDescricao.Text;
-                decimal preco = udPreco.Value;
-                string unidade = txtUnidVenda.Text;
-                string categoria = cbCategoria.SelectedItem?.ToString() ?? "Sem Categoria";
-                decimal estoqueMin = udEstqMinimo.Value;
-                bool descontinuado = checkDescontinuado.Checked;
-
-
-                string status = descontinuado ? "Descontinuado" : "Ativo";
-                string linhaProduto = $"{codBarras} \n| {descricao.ToUpper()} \n| Preco: {preco:C2} \n| Est. Min: {estoqueMin} \n| {status}";
-
-                listBox1.Items.Add(linhaProduto);
-
-            }
+            Produto produto = new(
+                txtCodBarras.Text,
+                txtDescricao.Text,
+                (double)nudValorUnit.Value,
+                txtUnidadeVenda.Text,
+                Categoria.ObterPorId(Convert.ToInt32(cmbCategoria.SelectedValue)),
+                (double)nudEstoqueMinimo.Value,
+                (double)nudClasseDesconto.Value
+                );
+            produto.Inserir();
+            if (produto.Id > 0)
+                MessageBox.Show($"Produto {produto.Descricao} gravado com sucesso!");
         }
     }
 }

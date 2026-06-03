@@ -1,4 +1,4 @@
-﻿namespace Servicehub
+﻿namespace ServiceHub
 {
     partial class FrmProduto
     {
@@ -28,312 +28,291 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProduto));
             txtCodBarras = new TextBox();
             txtDescricao = new TextBox();
-            txtUnidVenda = new TextBox();
-            lblCodBarras = new Label();
-            lblDescricao = new Label();
-            lblPreco = new Label();
-            btnBuscar = new Button();
-            lblUnidVenda = new Label();
-            cbCategoria = new ComboBox();
-            lblCategoria = new Label();
-            lblEstqMinimo = new Label();
-            lblClassDesconto = new Label();
+            nudValorUnit = new NumericUpDown();
+            txtUnidadeVenda = new TextBox();
+            cmbCategoria = new ComboBox();
+            nudEstoqueMinimo = new NumericUpDown();
+            nudClasseDesconto = new NumericUpDown();
+            chkDescontinuado = new CheckBox();
+            picImagem = new PictureBox();
+            btnCarregarImagem = new Button();
             btnSalvar = new Button();
             btnEditar = new Button();
             btnCancelar = new Button();
-            btnCarregarImg = new Button();
-            checkDescontinuado = new CheckBox();
-            pictureBox1 = new PictureBox();
-            udPreco = new NumericUpDown();
-            udClassDesconto = new NumericUpDown();
-            listBox1 = new ListBox();
-            udEstqMinimo = new NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)udPreco).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)udClassDesconto).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)udEstqMinimo).BeginInit();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            ofdObterImagem = new OpenFileDialog();
+            button1 = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)nudValorUnit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudEstoqueMinimo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudClasseDesconto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picImagem).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // txtCodBarras
             // 
-            txtCodBarras.Location = new Point(94, 33);
+            txtCodBarras.Location = new Point(96, 25);
             txtCodBarras.Name = "txtCodBarras";
             txtCodBarras.PlaceholderText = "Código de Barras";
-            txtCodBarras.Size = new Size(233, 23);
+            txtCodBarras.Size = new Size(200, 23);
             txtCodBarras.TabIndex = 0;
             // 
             // txtDescricao
             // 
-            txtDescricao.Location = new Point(94, 72);
+            txtDescricao.Location = new Point(96, 54);
             txtDescricao.Name = "txtDescricao";
             txtDescricao.PlaceholderText = "Descrição";
-            txtDescricao.Size = new Size(401, 23);
-            txtDescricao.TabIndex = 2;
+            txtDescricao.Size = new Size(342, 23);
+            txtDescricao.TabIndex = 1;
             // 
-            // txtUnidVenda
+            // nudValorUnit
             // 
-            txtUnidVenda.Location = new Point(372, 112);
-            txtUnidVenda.Name = "txtUnidVenda";
-            txtUnidVenda.PlaceholderText = "Unid. Venda";
-            txtUnidVenda.Size = new Size(123, 23);
-            txtUnidVenda.TabIndex = 5;
+            nudValorUnit.DecimalPlaces = 2;
+            nudValorUnit.Location = new Point(96, 83);
+            nudValorUnit.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
+            nudValorUnit.Name = "nudValorUnit";
+            nudValorUnit.Size = new Size(100, 23);
+            nudValorUnit.TabIndex = 2;
             // 
-            // lblCodBarras
+            // txtUnidadeVenda
             // 
-            lblCodBarras.AutoSize = true;
-            lblCodBarras.Location = new Point(27, 36);
-            lblCodBarras.Name = "lblCodBarras";
-            lblCodBarras.Size = new Size(61, 15);
-            lblCodBarras.TabIndex = 15;
-            lblCodBarras.Text = "CodBarras";
+            txtUnidadeVenda.Location = new Point(296, 82);
+            txtUnidadeVenda.Name = "txtUnidadeVenda";
+            txtUnidadeVenda.PlaceholderText = "Unid. Venda";
+            txtUnidadeVenda.Size = new Size(142, 23);
+            txtUnidadeVenda.TabIndex = 3;
             // 
-            // lblDescricao
+            // cmbCategoria
             // 
-            lblDescricao.AutoSize = true;
-            lblDescricao.Location = new Point(27, 75);
-            lblDescricao.Name = "lblDescricao";
-            lblDescricao.Size = new Size(58, 15);
-            lblDescricao.TabIndex = 16;
-            lblDescricao.Text = "Descrição";
+            cmbCategoria.Items.AddRange(new object[] { "Amortecedores", "Óleos e Lubrificantes", "Diversos" });
+            cmbCategoria.Location = new Point(96, 112);
+            cmbCategoria.Name = "cmbCategoria";
+            cmbCategoria.Size = new Size(342, 23);
+            cmbCategoria.TabIndex = 4;
             // 
-            // lblPreco
+            // nudEstoqueMinimo
             // 
-            lblPreco.AutoSize = true;
-            lblPreco.Location = new Point(27, 112);
-            lblPreco.Name = "lblPreco";
-            lblPreco.Size = new Size(37, 15);
-            lblPreco.TabIndex = 17;
-            lblPreco.Text = "Preço";
+            nudEstoqueMinimo.DecimalPlaces = 3;
+            nudEstoqueMinimo.Location = new Point(120, 145);
+            nudEstoqueMinimo.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
+            nudEstoqueMinimo.Name = "nudEstoqueMinimo";
+            nudEstoqueMinimo.Size = new Size(100, 23);
+            nudEstoqueMinimo.TabIndex = 5;
             // 
-            // btnBuscar
+            // nudClasseDesconto
             // 
-            btnBuscar.Location = new Point(397, 33);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(98, 26);
-            btnBuscar.TabIndex = 1;
-            btnBuscar.Text = "&Buscar";
-            btnBuscar.UseVisualStyleBackColor = true;
+            nudClasseDesconto.DecimalPlaces = 3;
+            nudClasseDesconto.Location = new Point(338, 145);
+            nudClasseDesconto.Name = "nudClasseDesconto";
+            nudClasseDesconto.Size = new Size(100, 23);
+            nudClasseDesconto.TabIndex = 6;
             // 
-            // lblUnidVenda
+            // chkDescontinuado
             // 
-            lblUnidVenda.AutoSize = true;
-            lblUnidVenda.Location = new Point(271, 115);
-            lblUnidVenda.Name = "lblUnidVenda";
-            lblUnidVenda.Size = new Size(86, 15);
-            lblUnidVenda.TabIndex = 4;
-            lblUnidVenda.Text = "Unidade Venda";
+            chkDescontinuado.Location = new Point(296, 178);
+            chkDescontinuado.Name = "chkDescontinuado";
+            chkDescontinuado.Size = new Size(150, 24);
+            chkDescontinuado.TabIndex = 7;
+            chkDescontinuado.Text = "Descontinuado";
             // 
-            // cbCategoria
+            // picImagem
             // 
-            cbCategoria.FormattingEnabled = true;
-            cbCategoria.Items.AddRange(new object[] { "Amortecedor", "Óleos e Lubrificantes", "Outros" });
-            cbCategoria.Location = new Point(93, 150);
-            cbCategoria.Name = "cbCategoria";
-            cbCategoria.Size = new Size(402, 23);
-            cbCategoria.TabIndex = 6;
+            picImagem.BorderStyle = BorderStyle.FixedSingle;
+            picImagem.Location = new Point(455, 12);
+            picImagem.Name = "picImagem";
+            picImagem.Size = new Size(150, 150);
+            picImagem.SizeMode = PictureBoxSizeMode.StretchImage;
+            picImagem.TabIndex = 8;
+            picImagem.TabStop = false;
             // 
-            // lblCategoria
+            // btnCarregarImagem
             // 
-            lblCategoria.AutoSize = true;
-            lblCategoria.Location = new Point(27, 153);
-            lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(58, 15);
-            lblCategoria.TabIndex = 18;
-            lblCategoria.Text = "Categoria";
-            // 
-            // lblEstqMinimo
-            // 
-            lblEstqMinimo.AutoSize = true;
-            lblEstqMinimo.Location = new Point(27, 194);
-            lblEstqMinimo.Name = "lblEstqMinimo";
-            lblEstqMinimo.Size = new Size(94, 15);
-            lblEstqMinimo.TabIndex = 19;
-            lblEstqMinimo.Text = "Estoque Minímo";
-            // 
-            // lblClassDesconto
-            // 
-            lblClassDesconto.AutoSize = true;
-            lblClassDesconto.Location = new Point(271, 196);
-            lblClassDesconto.Name = "lblClassDesconto";
-            lblClassDesconto.Size = new Size(93, 15);
-            lblClassDesconto.TabIndex = 8;
-            lblClassDesconto.Text = "Classe Desconto";
+            btnCarregarImagem.Location = new Point(455, 172);
+            btnCarregarImagem.Name = "btnCarregarImagem";
+            btnCarregarImagem.Size = new Size(150, 30);
+            btnCarregarImagem.TabIndex = 9;
+            btnCarregarImagem.Text = "Carregar Imagem";
             // 
             // btnSalvar
             // 
-            btnSalvar.FlatAppearance.BorderSize = 0;
-            btnSalvar.FlatAppearance.MouseDownBackColor = Color.Lime;
-            btnSalvar.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
-            btnSalvar.FlatStyle = FlatStyle.Flat;
-            btnSalvar.Font = new Font("Arial Narrow", 11.25F, FontStyle.Bold);
-            btnSalvar.Image = Properties.Resources.Save;
-            btnSalvar.Location = new Point(98, 333);
+            btnSalvar.Location = new Point(20, 222);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(97, 64);
-            btnSalvar.TabIndex = 12;
+            btnSalvar.Size = new Size(150, 35);
+            btnSalvar.TabIndex = 10;
             btnSalvar.Text = "&Salvar";
-            btnSalvar.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
             // 
             // btnEditar
             // 
-            btnEditar.FlatAppearance.BorderSize = 0;
-            btnEditar.FlatAppearance.MouseDownBackColor = Color.Blue;
-            btnEditar.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 192, 255);
-            btnEditar.FlatStyle = FlatStyle.Flat;
-            btnEditar.Font = new Font("Arial Narrow", 11.25F, FontStyle.Bold);
-            btnEditar.Image = Properties.Resources.Edit;
-            btnEditar.Location = new Point(346, 333);
+            btnEditar.Location = new Point(196, 222);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(97, 64);
-            btnEditar.TabIndex = 13;
+            btnEditar.Size = new Size(150, 35);
+            btnEditar.TabIndex = 10;
             btnEditar.Text = "&Editar";
-            btnEditar.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnEditar.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            btnCancelar.FlatAppearance.BorderSize = 0;
-            btnCancelar.FlatAppearance.MouseDownBackColor = Color.Red;
-            btnCancelar.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 192);
-            btnCancelar.FlatStyle = FlatStyle.Flat;
-            btnCancelar.Font = new Font("Arial Narrow", 11.25F, FontStyle.Bold);
-            btnCancelar.Image = Properties.Resources.Cancel;
-            btnCancelar.Location = new Point(594, 333);
+            btnCancelar.Location = new Point(384, 222);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(97, 64);
-            btnCancelar.TabIndex = 14;
+            btnCancelar.Size = new Size(150, 35);
+            btnCancelar.TabIndex = 10;
             btnCancelar.Text = "&Cancelar";
-            btnCancelar.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // btnCarregarImg
+            // label1
             // 
-            btnCarregarImg.Location = new Point(607, 234);
-            btnCarregarImg.Name = "btnCarregarImg";
-            btnCarregarImg.Size = new Size(159, 29);
-            btnCarregarImg.TabIndex = 10;
-            btnCarregarImg.Text = "C&arregar Imagem";
-            btnCarregarImg.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Location = new Point(20, 28);
+            label1.Name = "label1";
+            label1.Size = new Size(61, 15);
+            label1.TabIndex = 11;
+            label1.Text = "CodBarras";
             // 
-            // checkDescontinuado
+            // label2
             // 
-            checkDescontinuado.AutoSize = true;
-            checkDescontinuado.Location = new Point(389, 240);
-            checkDescontinuado.Name = "checkDescontinuado";
-            checkDescontinuado.Size = new Size(106, 19);
-            checkDescontinuado.TabIndex = 11;
-            checkDescontinuado.Text = "Descontinuado";
-            checkDescontinuado.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.Location = new Point(20, 57);
+            label2.Name = "label2";
+            label2.Size = new Size(58, 15);
+            label2.TabIndex = 12;
+            label2.Text = "Descrição";
             // 
-            // pictureBox1
+            // label3
             // 
-            pictureBox1.Location = new Point(607, 33);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(159, 192);
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
+            label3.AutoSize = true;
+            label3.Location = new Point(20, 85);
+            label3.Name = "label3";
+            label3.Size = new Size(37, 15);
+            label3.TabIndex = 13;
+            label3.Text = "Preço";
             // 
-            // udPreco
+            // label4
             // 
-            udPreco.DecimalPlaces = 2;
-            udPreco.Location = new Point(98, 111);
-            udPreco.Name = "udPreco";
-            udPreco.Size = new Size(120, 23);
-            udPreco.TabIndex = 3;
+            label4.AutoSize = true;
+            label4.Location = new Point(209, 88);
+            label4.Name = "label4";
+            label4.Size = new Size(86, 15);
+            label4.TabIndex = 14;
+            label4.Text = "Unidade Venda";
             // 
-            // udClassDesconto
+            // label5
             // 
-            udClassDesconto.DecimalPlaces = 2;
-            udClassDesconto.Location = new Point(375, 194);
-            udClassDesconto.Name = "udClassDesconto";
-            udClassDesconto.Size = new Size(120, 23);
-            udClassDesconto.TabIndex = 9;
+            label5.AutoSize = true;
+            label5.Location = new Point(20, 115);
+            label5.Name = "label5";
+            label5.Size = new Size(58, 15);
+            label5.TabIndex = 15;
+            label5.Text = "Categoria";
             // 
-            // listBox1
+            // label6
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(824, 33);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(934, 184);
-            listBox1.TabIndex = 20;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            label6.AutoSize = true;
+            label6.Location = new Point(20, 147);
+            label6.Name = "label6";
+            label6.Size = new Size(94, 15);
+            label6.TabIndex = 16;
+            label6.Text = "Estoque Mínimo";
             // 
-            // udEstqMinimo
+            // label7
             // 
-            udEstqMinimo.DecimalPlaces = 2;
-            udEstqMinimo.Location = new Point(127, 192);
-            udEstqMinimo.Name = "udEstqMinimo";
-            udEstqMinimo.Size = new Size(120, 23);
-            udEstqMinimo.TabIndex = 7;
+            label7.AutoSize = true;
+            label7.Location = new Point(239, 148);
+            label7.Name = "label7";
+            label7.Size = new Size(93, 15);
+            label7.TabIndex = 17;
+            label7.Text = "Classe Desconto";
+            // 
+            // ofdObterImagem
+            // 
+            ofdObterImagem.FileName = "foto_produto";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(351, 13);
+            button1.Name = "button1";
+            button1.Size = new Size(87, 35);
+            button1.TabIndex = 10;
+            button1.Text = "&Buscar";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(7, 293);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(824, 308);
+            dataGridView1.TabIndex = 18;
             // 
             // FrmProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1787, 551);
-            Controls.Add(listBox1);
-            Controls.Add(udClassDesconto);
-            Controls.Add(udEstqMinimo);
-            Controls.Add(udPreco);
-            Controls.Add(pictureBox1);
-            Controls.Add(checkDescontinuado);
-            Controls.Add(cbCategoria);
-            Controls.Add(btnCarregarImg);
+            ClientSize = new Size(841, 613);
+            Controls.Add(dataGridView1);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(txtCodBarras);
+            Controls.Add(txtDescricao);
+            Controls.Add(nudValorUnit);
+            Controls.Add(txtUnidadeVenda);
+            Controls.Add(cmbCategoria);
+            Controls.Add(nudEstoqueMinimo);
+            Controls.Add(nudClasseDesconto);
+            Controls.Add(chkDescontinuado);
+            Controls.Add(picImagem);
+            Controls.Add(btnCarregarImagem);
             Controls.Add(btnCancelar);
+            Controls.Add(button1);
             Controls.Add(btnEditar);
             Controls.Add(btnSalvar);
-            Controls.Add(btnBuscar);
-            Controls.Add(lblUnidVenda);
-            Controls.Add(lblCategoria);
-            Controls.Add(lblClassDesconto);
-            Controls.Add(lblEstqMinimo);
-            Controls.Add(lblPreco);
-            Controls.Add(lblDescricao);
-            Controls.Add(lblCodBarras);
-            Controls.Add(txtUnidVenda);
-            Controls.Add(txtDescricao);
-            Controls.Add(txtCodBarras);
-            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmProduto";
-            Text = "Cadastro de Produtos";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Cadastro de Produto";
             Load += FrmProduto_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)udPreco).EndInit();
-            ((System.ComponentModel.ISupportInitialize)udClassDesconto).EndInit();
-            ((System.ComponentModel.ISupportInitialize)udEstqMinimo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudValorUnit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudEstoqueMinimo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudClasseDesconto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picImagem).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
-
-        #endregion
-
-        private TextBox txtCodBarras;
-        private TextBox txtDescricao;
-        private TextBox txtUnidVenda;
-        private Label lblCodBarras;
-        private Label lblDescricao;
-        private Label lblPreco;
-        private Button btnBuscar;
-        private Label lblUnidVenda;
-        private ComboBox cbCategoria;
-        private Label lblCategoria;
-        private Label lblEstqMinimo;
-        private Label lblClassDesconto;
-        private Button btnSalvar;
+        // Componentes da interface
         private Button btnEditar;
         private Button btnCancelar;
-        private Button btnCarregarImg;
-        private CheckBox checkDescontinuado;
-        private PictureBox pictureBox1;
-        private NumericUpDown udPreco;
-        private NumericUpDown udClassDesconto;
-        private ListBox listBox1;
-        private NumericUpDown udEstqMinimo;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private TextBox txtCodBarras;
+        private TextBox txtDescricao;
+        private NumericUpDown nudValorUnit;
+        private TextBox txtUnidadeVenda;
+        private ComboBox cmbCategoria;
+        private NumericUpDown nudEstoqueMinimo;
+        private NumericUpDown nudClasseDesconto;
+        private CheckBox chkDescontinuado;
+        private PictureBox picImagem;
+        private Button btnCarregarImagem;
+        private Button btnSalvar;
+        private OpenFileDialog ofdObterImagem;
+        private Button button1;
+        private DataGridView dataGridView1;
     }
+    #endregion
 }
