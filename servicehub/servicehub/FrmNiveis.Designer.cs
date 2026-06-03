@@ -41,11 +41,11 @@
             btnExcluir = new Button();
             btnCancelar = new Button();
             txtBuscar = new TextBox();
-            dataGridView1 = new DataGridView();
+            dgvNiveis = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvNiveis).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -61,7 +61,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(90, 70);
+            label2.Location = new Point(100, 62);
             label2.Name = "label2";
             label2.Size = new Size(17, 15);
             label2.TabIndex = 1;
@@ -70,7 +70,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(345, 70);
+            label3.Location = new Point(339, 62);
             label3.Name = "label3";
             label3.Size = new Size(40, 15);
             label3.TabIndex = 2;
@@ -79,7 +79,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(625, 70);
+            label4.Location = new Point(635, 62);
             label4.Name = "label4";
             label4.Size = new Size(32, 15);
             label4.TabIndex = 3;
@@ -87,21 +87,21 @@
             // 
             // txtId
             // 
-            txtId.Location = new Point(51, 88);
+            txtId.Location = new Point(61, 80);
             txtId.Name = "txtId";
             txtId.Size = new Size(100, 23);
             txtId.TabIndex = 4;
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(190, 88);
+            txtNome.Location = new Point(200, 80);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(350, 23);
             txtNome.TabIndex = 5;
             // 
             // txtSigla
             // 
-            txtSigla.Location = new Point(598, 88);
+            txtSigla.Location = new Point(608, 80);
             txtSigla.Name = "txtSigla";
             txtSigla.Size = new Size(91, 23);
             txtSigla.TabIndex = 6;
@@ -119,6 +119,7 @@
             btnadicionar.Text = "&Adicionar";
             btnadicionar.TextAlign = ContentAlignment.BottomCenter;
             btnadicionar.UseVisualStyleBackColor = false;
+            btnadicionar.Click += btnadicionar_Click;
             // 
             // btnEditar
             // 
@@ -133,6 +134,7 @@
             btnEditar.Text = "&Editar";
             btnEditar.TextAlign = ContentAlignment.BottomCenter;
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnPesquisar
             // 
@@ -147,6 +149,7 @@
             btnPesquisar.Text = "&Pesquisar";
             btnPesquisar.TextAlign = ContentAlignment.BottomCenter;
             btnPesquisar.UseVisualStyleBackColor = false;
+            btnPesquisar.Click += btnPesquisar_Click;
             // 
             // btnExcluir
             // 
@@ -161,6 +164,7 @@
             btnExcluir.Text = "&Excluir";
             btnExcluir.TextAlign = ContentAlignment.BottomCenter;
             btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnCancelar
             // 
@@ -180,20 +184,22 @@
             // 
             txtBuscar.Location = new Point(51, 238);
             txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "Buscar Categoria";
             txtBuscar.Size = new Size(696, 23);
             txtBuscar.TabIndex = 12;
+            txtBuscar.Tag = "";
             // 
-            // dataGridView1
+            // dgvNiveis
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
-            dataGridView1.Location = new Point(51, 279);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(696, 150);
-            dataGridView1.TabIndex = 13;
+            dgvNiveis.AllowUserToAddRows = false;
+            dgvNiveis.AllowUserToDeleteRows = false;
+            dgvNiveis.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvNiveis.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
+            dgvNiveis.Location = new Point(51, 279);
+            dgvNiveis.Name = "dgvNiveis";
+            dgvNiveis.ReadOnly = true;
+            dgvNiveis.Size = new Size(696, 150);
+            dgvNiveis.TabIndex = 13;
             // 
             // Column1
             // 
@@ -224,7 +230,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvNiveis);
             Controls.Add(txtBuscar);
             Controls.Add(btnCancelar);
             Controls.Add(btnExcluir);
@@ -240,7 +246,8 @@
             Controls.Add(label1);
             Name = "FrmNiveis";
             Text = "FrmNiveis";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += FrmNiveis_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvNiveis).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -260,7 +267,7 @@
         private Button btnExcluir;
         private Button btnCancelar;
         private TextBox txtBuscar;
-        private DataGridView dataGridView1;
+        private DataGridView dgvNiveis;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;

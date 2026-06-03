@@ -44,7 +44,7 @@ namespace Servicehub
                 dgvCategorias.Rows.Add();
                 dgvCategorias.Rows[dgvCategorias.Rows.Count - 1].Cells[0].Value = categoria.Id;
                 dgvCategorias.Rows[dgvCategorias.Rows.Count - 1].Cells[1].Value = categoria.Nome;
-                dgvCategorias.Rows[dgvCategorias.Rows.Count - 1].Cells[2].Value = categoria.Sigla;
+                dgvCategorias.Rows [dgvCategorias.Rows.Count - 1].Cells[2].Value = categoria.Sigla;
             }
         }
 

@@ -16,7 +16,7 @@ namespace servicehub
             ApplicationConfiguration.Initialize();
             //Application.Run(new FrmPrincipal());
            // Application.Run(new FrmCategorias());
-            Application.Run(new FrmProduto());
+            Application.Run(new FrmNiveis());
             //Application.
         }
     }
