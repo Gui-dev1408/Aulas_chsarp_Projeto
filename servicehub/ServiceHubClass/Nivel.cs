@@ -17,8 +17,6 @@ namespace ServiceHubClass
         public int Id { get; set; }
         public string? Nome { get; set; }
         public string? Sigla { get; set; }
-        // Construtores (Métodos)
-        public Nivel()
 
         {
             Id = 0;
