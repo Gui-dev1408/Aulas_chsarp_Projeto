@@ -31,8 +31,5 @@
     <Compile Update="FrmServicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>
