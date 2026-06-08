@@ -179,6 +179,7 @@
             btnCancelar.Text = "&Cancelar";
             btnCancelar.TextAlign = ContentAlignment.BottomCenter;
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // txtBuscar
             // 
@@ -200,6 +201,7 @@
             dgvNiveis.ReadOnly = true;
             dgvNiveis.Size = new Size(696, 150);
             dgvNiveis.TabIndex = 13;
+            dgvNiveis.CellClick += dgvNiveis_CellClick;
             // 
             // Column1
             // 
